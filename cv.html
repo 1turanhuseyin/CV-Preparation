@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Hazırlama Aracı</title>
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+    <div id="page-title"><h1>CV Hazırlama Aracı</h1></div>
+    <div class="container">
+        <div class="cv-prepare">
+            <div class="enter-side">
+                <h2 class="prepare-side-title">Metin İçerikleri <hr></h2>
+                <h3 class="side-title">İsim kutusu</h3>
+                <p class="informations">Ad Soyad: <input type="text" id="ad-soyad-input"></p>
+                <p class="informations">Ünvan: <input type="text" id="unvan-input"></p>
+                <br>
+                <h3 class="side-title">İletişim Bilgileri</h3>
+                <p class="informations">Telefon: <input type="text" id="telefon-input" value="+90" maxlength="13"></p>
+                <p class="informations">Mail: <input type="text" maxlength="33" id="mail-input"></p>
+                <p class="informations">Web: <input type="text" maxlength="33" id="web-input"></p>
+                <p class="informations">Adres: <textarea maxlength="240" name="Adres" id="adres-input" cols="20" rows="5"></textarea></p>
+                <br>
+                <h3 class="side-title">Eğitim Bilgileri</h3>
+                <p class="informations">Açıklama: <textarea maxlength="240" name="Adres" id="egitim-aciklama-input" cols="20" rows="5"></textarea></p>
+                <p class="informations">Okul Sayısı: 
+                    <select id="select-js">
+                        <option value="">Seçiniz</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </p>
+                <div id="okul-content">
+                    <!-- <p class="informations" id="okul-1">1. Okul <input type="text"> <input type="text" placeholder="Açıklama"></p>
+
+                    <p class="informations" id="okul-2">2. Okul <input type="text"> <input type="text" placeholder="Açıklama"></p>
+                    
+                    <p class="informations" id="okul-3">3. Okul <input type="text"> <input type="text" placeholder="Açıklama"></p> -->
+                </div>
+
+                <h3 class="side-title">Yetenekler</h3>
+                <p class="informations">Açıklama: <textarea maxlength="240" name="Adres" id="yetenek-aciklama-input" cols="20" rows="5"></textarea></p>
+                <p class="informations">Yetenek Sayısı: 
+                    <select id="yetenek-select-js">
+                        <option value="">Seçiniz</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </p>
+                <div id="yetenek-content">
+                    <!-- <p class="informations" id="yetenek-1">1. Yetenek <input type="text" id="yetenek1-adi" maxlength="20"> <input type="text" id="yetenek1-aciklama" maxlength="20" placeholder="Açıklama"></p>
+
+                    <p class="informations" id="yetenek-2">2. Yetenek <input type="text" id="yetenek2-adi" maxlength="20"> <input type="text" id="yetenek2-aciklama" maxlength="20" placeholder="Açıklama"></p> -->
+                </div>
+
+                <h3 class="side-title">Hakkımda</h3>
+                <p class="informations">Açıklama: <textarea maxlength="500" name="Adres" id="hakkimda-aciklama-input" cols="20" rows="5"></textarea></p>
+
+                <h3 class="side-title">İş Deneyimi</h3>
+                <p class="informations">Açıklama: <textarea maxlength="500" name="Adres" id="isdeneyimi-aciklama-input" cols="20" rows="5"></textarea></p>
+                
+
+            </div>
+
+            <div class="appearance-side">
+                <h2 class="prepare-side-title">Görünüş <hr></h2>
+                <h3 class="side-title">Renkler</h3>
+                <p class="informations">Arkaplan Rengi : <input type="color" value="#e66465" id="arkaplan-rengi-input"></p>
+                <p class="informations">Sol Kolon Rengi : <input type="color" value="#960202" id="solkolon-rengi-input"></p>
+                <p class="informations">İsim Kutusu Rengi : <input type="color" id="isimkutusu-rengi-input"></p>
+                <p class="informations">İsim Kutusu Yazı Rengi : <input type="color" value="#ffffff" id="isimkutusu-yazirengi-input"></p>
+
+                <h3 class="side-title">Yazı Tipi</h3>
+                <p class="informations">Yazı tipi : 
+                    <select id="yazitipi-select-js">
+                        <option value="">Seçiniz</option>
+                        <option value="system">Normal</option>
+                        <option value="bold">Kalın</option>
+                        <option value="courier">Daktilo</option>
+                    </select>
+                </p>
+
+                <h3 class="side-title">Fotoğraf</h3>
+                <p class="informations">Fotoğraf Çerçevesi Şekli : 
+                    <select id="foto-cerceve-select-js">
+                        <option value="">Seçiniz</option>
+                        <option value="koseli">Köşeli</option>
+                        <option value="oval">Oval</option>
+                        <option value="yuvarlak">Yuvarlak</option>
+                    </select>
+                </p>
+                
+                <h3 class="side-title">Başlık Altı Çizgileri</h3>
+                <p class="informations">Çizgi Rengi : <input type="color" id="cizgi-rengi-input"></p>
+                <p class="informations">Çizgi Şekli : 
+                    <select id="cizgi-sekli-select-js">
+                        <option value="">Seçiniz</option>
+                        <option value="dotted">Noktalı</option>
+                        <option value="dashed">Çizgili</option>
+                        <option value="solid">Düz</option>
+                    </select>
+                </p>
+            </div>
+        </div>
+
+        <div class="cv-container" id="cv-container-js">
+            <div class="user-side" id="user-side-js">
+                <div class="profile-photo">
+                    <img src="Pp.jpg" class="my-photo"
+                    id="my-photo-js">
+                </div>
+                <div class="contact-box">
+                    <div class="contact">
+                        <p class="titles">İLETİŞİM <hr class="myHr"></p>
+                    </div>
+                    <div class="contact-contents">
+                        <div class="phone-number-box">
+                            <p class="phone-icon">
+                                <img src="phone-call.png" class="icons">
+                            </p>
+                            <div class="phone number">
+                                <p id="phone-number-js">+90 5396**23**</p>
+                            </div>
+                        </div>
+                        <div class="gmail-box">
+                            <p class="gmail-icon">
+                                <img src="email.png" class="icons">
+                            </p>
+                            <p class="gmail"><a href="mailto:1turanhuseyin@gmail.com" id="mail-js">@1turanhuseyin</a></p>
+                        </div>
+                        <div class="location-box">
+                            <p class="location-icon">
+                                <img src="home.png" class="icons">
+                            </p>
+                            <p class="location" id="adres-js">Istanbul, Turkey</p>
+                        </div>
+                        <div class="website-box">
+                            <p class="website-icon">
+                                <img src="screen.png" class="icons">
+                            </p>
+                            <p class="website" id="website-js">www.thegod.com</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="education-box">
+                    <div class="education">
+                        <p class="titles">EĞİTİM <hr class="myHr"></p>
+                    </div>
+                    <div class="education-contents">
+                        <div id="aciklama-js">
+                            <h5>DERECENİZ / BÖLÜMÜNÜZ</h5>
+                            <p class="text-font">Polis Meslek Yüksekokulu</p> 
+                            <p class="text-font">2018 - 2020</p>
+                        </div>
+                        <br>
+                        <div id="okul-sayisi-js">
+                            <!-- <ul>
+                                <li id="okul-1-li">
+                                    <ul>
+                                        <li id="okul-1-aciklama"></li>
+                                    </ul>
+                                </li>
+                            </ul> -->
+                            <h5>DERECENİZ / BÖLÜMÜNÜZ</h5>
+                            <p class="text-font">Siliconmade Academy</p> 
+                            <p class="text-font">2024 - ∞</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-box">
+                    <div class="skills">
+                        <p class="titles">YETENEKLER <hr class="myHr"></p>
+                    </div>
+                    <div class="skills-contents">
+                        <div id="yetenek-aciklama-js">
+
+                        </div>
+                        <div id="yetenek-sayisi-js">
+                            <p class="text-font">Otodidaktizm</p>
+                            <br>
+                            <p class="text-font">Takım oyuncusu</p>
+                            <br>
+                            <p class="text-font">Analitik düşünme</p>
+                            <br>
+                            <p class="text-font">Problem çözme</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sentences-side">
+                <div class="signboard" id="signboard-js">
+                    <h3 id="tabela-ad-soyad">HÜSEYİN TURAN</h3>
+                    <p class="line">━━━━━</p>
+                    <p class="appellation" id="tabela-unvan">Full Stack Developer</p>
+                </div>
+                <div class="profile-box">
+                    <div class="profile">
+                        <p class="titles">HAKKIMDA <hr class="myHr"></p>
+                    </div>
+                    <div class="profile-sentences">
+                        <p class="sentences" id="hakkimda-aciklama-js">
+                            Merhaba. 24 yaşındayım ve 3 yıldır memur olarak çalışıyorum. Ben bir otodidaktiğim. Kendimi geliştirmeyi seviyorum. En büyük gelişim alanım yazılım ve kendimi frontend alanında geliştiriyorum. Şu anda HTML, CSS ve Bootstrap'te akıcıyım ve JavaScript öğreniyorum. Ayrıca B1 düzeyinde İngilizce bilgisine sahibim.
+                        </p>
+                    </div>
+                </div>
+                <div class="work-experience-box">
+                    <div class="work-experience">
+                        <p class="titles">İŞ DENEYİMİ <hr class="myHr"></p>
+                    </div>
+                    <div class="work-experience-sentences" id="isdeneyimi-aciklama-js">
+                        <h5>Full Stack Developer</h5>
+                        <p class="sentences">Siliconmade Academy / 2024 - Halen</p>
+                        <br>
+                        <p class="sentences">
+                            20 Ocak 2024 tarihinden itibaren Siliconmade Academy Eğitim Kurumu'nda "Fast Full Stack Developer" eğitimi alıyorum. Bu eğitim kapsamında bilgilerimi artırarak bu alanda daha yaratıcı oluyorum. Her zaman kendimi geliştirmeye devam edeceğim, edeceğim.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cv.js"></script>
+</body>
+</html>
